@@ -65,7 +65,7 @@ export default function Dialogs({ id, name, breed, image }: Props) {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose}>Close</Button>
-                    <Button onClick={() => dispatch(deletePuppyAsync(id))}>
+                    <Button onClick={() => dispatch(deletePuppyAsync({ id, handleClose }))}>
                         <DeleteIcon />
                         Delete
                     </Button>

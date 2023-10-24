@@ -18,7 +18,7 @@ const initiaValues: PuppyState = {
 
 export const deletePuppyAsync = createAsyncThunk(
     'deletePuppy/deletePuppyAsync',
-    async (id: number, { dispatch }) => {
+    async ({ id, handleClose }: { id: number, handleClose: () => void }, { dispatch }) => {
         try {
             const token = localStorage.getItem("token");
             const config = {
@@ -37,6 +37,7 @@ export const deletePuppyAsync = createAsyncThunk(
                 progress: undefined,
                 theme: "light",
             });
+            handleClose()
             dispatch(puppyAsync())
             return result.data;
         } catch (error) {
