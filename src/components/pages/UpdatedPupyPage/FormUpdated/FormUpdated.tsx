@@ -27,15 +27,6 @@ export default function FormUpdated({ id, name, breed, handleClose }: Props) {
             formData.append("file", data.imageUrl[0]);
             console.log(data)
             dispatch(updatedPuppyAsync({ id, formData, handleClose }))
-            // const token = localStorage.getItem("token");
-            // const config = {
-            //     headers: {
-            //         authorization: token
-            //     }
-            // };
-            // axios.put(`http://localhost:30/api/puppy/${id}`, formData, config)
-            //     .then(res => console.log(res))
-            //     .catch(errors => console.log(errors))
         })}>
             <Stack direction='column' spacing={2}>
                 <Stack direction='column' spacing={2}>

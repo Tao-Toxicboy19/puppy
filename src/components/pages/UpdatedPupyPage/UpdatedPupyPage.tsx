@@ -5,7 +5,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import { TransitionProps } from '@mui/material/transitions';
-import { IconButton } from '@mui/material';
+import { Box, IconButton } from '@mui/material';
 import ModeEditOutlineIcon from '@mui/icons-material/ModeEditOutline';
 import FormUpdated from './FormUpdated/FormUpdated';
 
@@ -55,12 +55,14 @@ export default function UpdatedPuppyPage({ id, name, breed }: Props) {
                 <DialogTitle>{"Updated"}</DialogTitle>
                 <DialogContent>
                     <DialogContentText id="alert-dialog-slide-description">
-                        <FormUpdated
-                            id={id}
-                            name={name}
-                            breed={breed}
-                            handleClose={handleClose}
-                        />
+                        <Box>
+                            <FormUpdated
+                                id={id}
+                                name={name}
+                                breed={breed}
+                                handleClose={handleClose}
+                            />
+                        </Box>
                     </DialogContentText>
                 </DialogContent>
             </Dialog>

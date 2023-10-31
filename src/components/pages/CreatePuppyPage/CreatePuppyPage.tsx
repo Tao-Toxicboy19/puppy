@@ -7,7 +7,7 @@ import DialogActions from '@mui/material/DialogActions';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import { AddCircle } from '@mui/icons-material';
-import { Badge, Stack, TextField } from '@mui/material';
+import { Stack, TextField } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { useAppDispatch } from '../../../store/store';
 import { createPuppyAsync } from '../../../store/slices/PuppySlices/createPuppySlice';
@@ -38,9 +38,7 @@ export default function CreatePuppyPage({ handleClickOpen, handleClose, open }: 
     return (
         <div>
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                <Badge badgeContent={4} color="error">
-                    <AddCircle onClick={handleClickOpen} />
-                </Badge>
+                <AddCircle onClick={handleClickOpen} />
             </IconButton>
             <BootstrapDialog
                 onClose={handleClose}

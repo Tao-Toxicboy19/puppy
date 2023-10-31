@@ -162,7 +162,7 @@ export default function Header() {
                         component="div"
                         sx={{ display: { xs: 'none', sm: 'block' } }}
                     >
-                        MUI
+                        Puppy cafe
                     </Typography>
                     <Search>
                         <SearchIconWrapper>

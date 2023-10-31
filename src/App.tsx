@@ -1,8 +1,5 @@
 import LoginPage from './components/pages/LoginPage/LoginPage'
-import {
-  Route, Navigate,
-  Routes,
-} from "react-router-dom";
+import { Route, Navigate, Routes, } from "react-router-dom";
 import RegisterPage from './components/pages/RegisterPage/RegisterPage';
 import PublicRoute from './Routes/PublicRoute';
 import PrivateRoute from './Routes/PrivateRoute';
